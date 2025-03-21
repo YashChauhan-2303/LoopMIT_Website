@@ -1,3 +1,26 @@
+/* Add this to your existing CSS (style.css) */
+.work-box {
+  margin-bottom: 3rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: #fff;
+  height: 100%; /* Ensure all boxes have the same height */
+}
+
+.work-img {
+  display: block;
+  overflow: hidden;
+  height: 250px; /* Set a fixed height for all image containers */
+}
+
+.work-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This maintains aspect ratio while filling the container */
+  object-position: center; /* Centers the image within the container */
+  transition: all 1s;
+}
+
 .pod-image-container {
   height: 100%;
   display: flex;
