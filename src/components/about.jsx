@@ -1,5 +1,5 @@
 import React from "react";
-import myImage from "../img/myImage.png";
+import Pod from '../img/pod.jpeg'
 
 class About extends React.Component {
   constructor() {
@@ -32,33 +32,12 @@ class About extends React.Component {
           <div className="row">
             <div className="col-sm-12">
               <div className="box-shadow-full">
-              <div className="title-box-2">
-                        <h5 className="title-center">About Us</h5>
-                      </div>
+                <div className="title-box-2">
+                  <h5 className="title-center">About Us</h5>
+                </div>
                 <div className="row">
                   <div className="col-md-6">
-                    <div className="row">
-                      <div
-                        className="col-sm-6 col-md-5"
-                        style={{ margin: "0 auto" }}
-                      >
-                        <div
-                          className="about-img"
-                          style={{ textAlign: "center" }}
-                        >
-                          <img
-                            className="img-fluid rounded b-shadow-a"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
                     <div className="about-me pt-4 pt-md-0">
-                      {/* <div className="title-box-2">
-                        <h5 className="title-left">About Us</h5>
-                      </div> */}
                       {this.state.about_me.map(content => {
                         return (
                           <p className="lead" key={content.id}>
@@ -66,6 +45,11 @@ class About extends React.Component {
                           </p>
                         );
                       })}
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="pod-image-container">
+                      <img src={Pod} alt="pod photo" className="pod-image" />
                     </div>
                   </div>
                 </div>
