@@ -5,56 +5,21 @@ class About extends React.Component {
   constructor() {
     super();
     this.state = {
-      skills: [
-        { id: "HTML5_skill", content: "HTML5", porcentage: "80%", value: "80" },
-        { id: "CSS3_skill", content: "CSS3", porcentage: "75%", value: "75" },
-        {
-          id: "JavaScript_skill",
-          content: "JavaScript",
-          porcentage: "90%",
-          value: "90"
-        },
-        { id: "PHP_skill", content: "PHP", porcentage: "70%", value: "70" },
-        {
-          id: "ReactJS_skill",
-          content: "ReactJS",
-          porcentage: "80%",
-          value: "80"
-        },
-        {
-          id: "Python_skill",
-          content: "Python",
-          porcentage: "75%",
-          value: "75"
-        },
-        {
-          id: "VanillaJS_skill",
-          content: "VanillaJS",
-          porcentage: "85%",
-          value: "85"
-        },
-        {
-          id: "Wordpress_skill",
-          content: "Wordpress",
-          porcentage: "80%",
-          value: "80"
-        }
-      ],
       about_me: [
         {
           id: "first-p-about",
           content:
-            "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis."
+            "Founded in 2019, Loop MIT is the official Hyperloop Student Project Team of MIT, Manipal. Comprising a dynamic group of passionate and skilled students, we are committed to revolutionizing transportation by contributing to the development of Hyperloop, the fifth mode of transportation. With a strong emphasis on sustainability, speed, and safety, we strive to design and innovate high-speed, energy-efficient mobility solutions that push the boundaries of modern engineering. Our team is dedicated to pioneering advancements in magnetic levitation, vacuum tube technology, and aerodynamic optimization to make futuristic transportation a reality."
         },
         {
           id: "second-p-about",
           content:
-            "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis."
+            "Our commitment and technical prowess have earned us recognition at prestigious international competitions. In both 2022 and 2023, we successfully cleared the first rounds of the highly competitive European Hyperloop Week (EHW), where teams from across the globe showcase cutting-edge Hyperloop technology. These achievements reflect our team's dedication to research, innovation, and excellence in Hyperloop development. Competing on a global stage has provided us with invaluable experience, helping us refine our designs and push technological boundaries."
         },
         {
           id: "third-p-about",
           content:
-            "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis."
+            "A major milestone in our journey came in 2025, when we successfully completed our first prototype and participated in the GHC competition, held at IIT Madras in February 2025. Our hard work and innovation were recognized as we won the Best Demonstration Award and the Best Mechanical Award, further solidifying our position as one of India's leading student-led Hyperloop research teams. With each step forward, we continue to challenge the limits of engineering and technology, striving to create a more sustainable and efficient future for transportation."
         }
       ]
     };
@@ -67,6 +32,9 @@ class About extends React.Component {
           <div className="row">
             <div className="col-sm-12">
               <div className="box-shadow-full">
+              <div className="title-box-2">
+                        <h5 className="title-center">About Us</h5>
+                      </div>
                 <div className="row">
                   <div className="col-md-6">
                     <div className="row">
@@ -85,35 +53,12 @@ class About extends React.Component {
                         </div>
                       </div>
                     </div>
-                    <div className="skill-mf">
-                      {/* <p className="title-s">Skill</p> */}
-                      {this.state.skills.map(skill => {
-                        return (
-                          <React.Fragment key={skill.id}>
-                            <span>{skill.content}</span>{" "}
-                            <span className="pull-right">
-                              {skill.porcentage}
-                            </span>
-                            <div className="progress">
-                              <div
-                                className="progress-bar"
-                                role="progressbar"
-                                style={{ width: skill.porcentage }}
-                                aria-valuenow={skill.value}
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                              ></div>
-                            </div>
-                          </React.Fragment>
-                        );
-                      })}
-                    </div>
                   </div>
                   <div className="col-md-6">
                     <div className="about-me pt-4 pt-md-0">
-                      <div className="title-box-2">
-                        <h5 className="title-left">About Me</h5>
-                      </div>
+                      {/* <div className="title-box-2">
+                        <h5 className="title-left">About Us</h5>
+                      </div> */}
                       {this.state.about_me.map(content => {
                         return (
                           <p className="lead" key={content.id}>

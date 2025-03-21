@@ -167,6 +167,14 @@ a:hover {
   position: relative;
 }
 
+.title-center {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  position: relative; /* Ensures the pseudo-element aligns properly */
+  width: 100%;
+}
+
 .title-left:before {
   content: '';
   position: absolute;
@@ -176,6 +184,16 @@ a:hover {
   bottom: -12px;
 }
 
+.title-center:before {
+  content: '';
+  position: absolute;
+  height: 3px;
+  background-color: #0078ff;
+  width: 100px;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%); /* Centers the underline */
+}
 /* Box */
 
 .box-pl2 {
