@@ -1,5 +1,6 @@
 import React from "react";
 import Pod from '../img/pod.jpeg'
+import Animation1 from "./animation"
 
 class About extends React.Component {
   constructor() {
@@ -28,6 +29,8 @@ class About extends React.Component {
   render() {
     return (
       <section id="about" className="about-mf sect-pt4 route">
+      <div style={{ overflowX: 'hidden' }}>
+      <Animation1 direction="right" delay={0.2}>
         <div className="container">
           <div className="row">
             <div className="col-sm-12">
@@ -56,6 +59,8 @@ class About extends React.Component {
               </div>
             </div>
           </div>
+        </div>
+        </Animation1>
         </div>
       </section>
     );

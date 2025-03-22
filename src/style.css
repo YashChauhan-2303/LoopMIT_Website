@@ -1,4 +1,9 @@
 /* Add this to your existing CSS (style.css) */
+.animation-wrapper {
+  display: block !important;
+  overflow: visible !important;
+}
+
 .work-box {
   margin-bottom: 3rem;
   -webkit-backface-visibility: hidden;

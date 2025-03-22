@@ -1,6 +1,7 @@
 // Portfolio.jsx
 import React from "react";
 import TeamMember from "./TeamMember"; // Import the new component
+import Animation1 from "./animation"
 
 // Import stock images
 import stock from "../img/image1.jpg";
@@ -54,6 +55,7 @@ class Portfolio extends React.Component {
 
     return (
       <section id="work" className="portfolio-mf sect-pt4 route">
+      <div style={{ overflowX: 'hidden' }}>
         <div className="container">
           <div className="row">
             <div className="col-sm-12">
@@ -66,6 +68,7 @@ class Portfolio extends React.Component {
               </div>
             </div>
           </div>
+      <Animation1 direction="right" delay={0.2}>
           <div className="row">
             {teamMembers.map(member => (
               <TeamMember 
@@ -76,6 +79,8 @@ class Portfolio extends React.Component {
               />
             ))}
           </div>
+        </Animation1>
+        </div>
         </div>
       </section>
     );

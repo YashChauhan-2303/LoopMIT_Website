@@ -1,8 +1,7 @@
 import React from "react";
 import $ from "jquery";
 
-import logo1 from "../img/male1.png";
-import logo2 from "../img/male.png";
+import logo2 from "../img/logo2.png";
 import logox from "../img/logo.png";
 
 class Navbar extends React.Component {
@@ -40,7 +39,7 @@ class Navbar extends React.Component {
         document
           .querySelector(".navbar-expand-md")
           .classList.remove("navbar-trans");
-        this.setState({ logo: logox });
+        this.setState({ logo: logo2 });
       } else {
         document
           .querySelector(".navbar-expand-md")

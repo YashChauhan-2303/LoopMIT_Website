@@ -5,6 +5,7 @@
   "homepage": "https://shloksomani.github.io/react-portfolio/",
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "emailjs-com": "^3.2.0",
     "gh-pages": "^2.2.0",
     "jquery": "^3.4.1",
     "lightbox2": "^2.11.0",
