@@ -29,38 +29,38 @@ class About extends React.Component {
   render() {
     return (
       <section id="about" className="about-mf sect-pt4 route">
-      <div style={{ overflowX: 'hidden' }}>
-      <Animation1 direction="right" delay={0.2}>
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12">
-              <div className="box-shadow-full">
-                <div className="title-box-2">
-                  <h5 className="title-center">About Us</h5>
-                </div>
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="about-me pt-4 pt-md-0">
-                      {this.state.about_me.map(content => {
-                        return (
-                          <p className="lead" key={content.id}>
-                            {content.content}
-                          </p>
-                        );
-                      })}
+        <div style={{ overflowX: 'hidden' }}>
+            <div className="container">
+              <div className="row">
+                <div className="col-sm-12">
+                  <div className="box-shadow-full about-box">
+                    <div className="title-box-2">
+                      <h5 className="title-center">About Us</h5>
                     </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="pod-image-container">
-                      <img src={Pod} alt="pod photo" className="pod-image" />
+          <Animation1 direction="right" delay={0.2}>
+                    <div className="row about-content-row">
+                      <div className="col-md-6 about-text-col">
+                        <div className="about-me pt-4 pt-md-0">
+                          {this.state.about_me.map(content => {
+                            return (
+                              <p className="lead about-paragraph" key={content.id}>
+                                {content.content}
+                              </p>
+                            );
+                          })}
+                        </div>
+                      </div>
+                      <div className="col-md-6 about-image-col">
+                        <div className="pod-image-container">
+                          <img src={Pod} alt="pod photo" className="pod-image responsive-image" />
+                        </div>
+                      </div>
                     </div>
+          </Animation1>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        </Animation1>
         </div>
       </section>
     );

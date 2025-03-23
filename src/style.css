@@ -1,4 +1,128 @@
 /* Add this to your existing CSS (style.css) */
+
+/* Add these new media queries for the specific screen sizes you mentioned */
+/* Add this to your CSS file */
+/* .pod-image-mobile {
+  display: none; 
+}
+
+@media (max-width: 425px) {
+  .pod-image {
+    display: none; 
+  }
+  
+  .pod-image-mobile {
+    display: block; 
+    width: 100%;
+    height: 180px;
+    max-height: 250px;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 425px) {
+  .pod-image {
+    height: 200px !important; 
+    width: 100% !important;
+    object-fit: contain !important; 
+  }
+  
+  .pod-image-container {
+    height: auto !important; 
+    padding: 10px 0 !important;
+  }
+  
+  .box-shadow-full {
+    padding: 1.5rem 0.75rem !important;
+  }
+  
+  .lead {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .pod-image {
+    height: 180px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .pod-image {
+    height: 180px; 
+  }
+  
+  .title-center {
+    font-size: 1.3rem; 
+  }
+} */
+
+/* Pod image styling */
+.pod-image-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+}
+
+.pod-image {
+  width: 100%;
+  height: auto; /* Change from fixed height to auto */
+  max-height: 1020px; /* Add max-height instead of fixed height */
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .pod-image {
+    height: 350px;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 425px) {
+  .pod-image {
+    height: 250px !important;
+    width: 100% !important;
+    object-fit: contain !important;
+  }
+  
+  .pod-image-container {
+    height: auto !important;
+    padding: 10px 0 !important;
+  }
+  
+  .box-shadow-full {
+    padding: 1.5rem 0.75rem !important;
+  }
+  
+  .lead {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .pod-image {
+    height: 180px !important;
+    width: 100% !important;
+    object-fit: contain !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .pod-image {
+    height: 150px !important;
+  }
+  
+  .title-center {
+    font-size: 1.3rem; 
+  }
+}
+
 /* Dark mode styles */
 .dark body {
   background-color: #1a1a1a !important;
@@ -68,7 +192,7 @@
   transition: all 1s;
 }
 
-.pod-image-container {
+/* .pod-image-container {
   height: 100%;
   display: flex;
   align-items: center;
@@ -78,14 +202,130 @@
 
 .pod-image {
   width: 100%;
-  height: 1020px; /* You can adjust this value to match your text height */
+  height: 1020px; 
   object-fit: cover;
   object-position: center;
 }
 
 @media (max-width: 768px) {
   .pod-image {
-    height: 350px; /* Smaller height for mobile devices */
+    height: 350px; 
+  }
+} */
+
+/* This section should be added to your style.css file */
+
+/* Reset all existing pod image styles first */
+.pod-image {
+  max-width: 100%;
+  height: auto !important;
+}
+
+/* Give our containers more specific classnames to increase CSS specificity */
+.about-box {
+  padding: 3rem;
+}
+
+.about-content-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-text-col, .about-image-col {
+  width: 100%;
+}
+
+.about-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Mobile-first approach for the pod image */
+.pod-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+  width: 100%;
+  height: auto !important;
+}
+
+.responsive-image {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 350px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+/* Then we add our specific media queries with high specificity selectors */
+@media (min-width: 768px) {
+  .about-text-col, .about-image-col {
+    width: 50%;
+  }
+  
+  .responsive-image {
+    max-height: 1020px !important;
+    object-fit: cover !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .about-mf .box-shadow-full.about-box {
+    padding: 1.5rem 0.75rem !important;
+  }
+  
+  .about-mf .about-paragraph {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+  
+  .about-mf .responsive-image {
+    max-height: 250px !important;
+  }
+  
+  /* Force display for debugging */
+  .about-mf .about-image-col {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .about-mf .responsive-image {
+    max-height: 180px !important;
+  } 
+  
+  /* Force display for debugging */
+  .about-mf .about-image-col {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .about-mf .responsive-image {
+    max-height: 150px !important;
+  }
+  
+  .about-mf .title-center {
+    font-size: 1.3rem !important;
+  }
+}
+
+/* Specifically target and remove any CSS that might be hiding or affecting our elements */
+@media (max-width: 425px), (max-width: 375px) {
+  .pod-image-mobile {
+    display: none !important;
+  }
+  
+  .pod-image-container, .pod-image {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
   }
 }
 
