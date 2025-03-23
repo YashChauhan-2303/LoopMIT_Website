@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import { useTheme } from "../context/ThemeContext.jsx";
 import imageOverlay from "../img/earth.jpg";
+import pod2 from "../img/pod2.jpeg";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -16,6 +18,9 @@ const Contact = () => {
     message: ""
   });
 
+  // Import the darkMode state from your ThemeContext
+  const { darkMode } = useTheme();
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -27,17 +32,17 @@ const Contact = () => {
     e.preventDefault();
     setStatus({ submitted: true, success: false, message: "Sending..." });
     
-    // Replace these IDs with your EmailJS credentials
+    // Keep your original EmailJS configuration
     emailjs.send(
-      "service_nn7lgbo", // Create service ID in EmailJS dashboard
-      "loopmit2019@gmail.com", // Create email template in EmailJS
+      "service_nn7lgbo",
+      "loopmit2019@gmail.com",
       {
         name: formData.name,
         email: formData.email,
         subject: formData.subject,
         message: formData.message
       },
-      "loopmit2019@gmail.com" // Your EmailJS user ID
+      "loopmit2019@gmail.com"
     )
       .then((response) => {
         setStatus({
@@ -57,10 +62,13 @@ const Contact = () => {
       });
   };
 
+  // Choose the background image based on darkMode state
+  const backgroundImage = darkMode ? pod2 : imageOverlay;
+
   return (
     <section
       className="paralax-mf footer-paralax bg-image sect-mt4 route"
-      style={{ backgroundImage: "url(" + imageOverlay + ")" }}
+      style={{ backgroundImage: "url(" + backgroundImage + ")" }}
     >
       <div className="overlay-mf"></div>
       <div className="container">
@@ -189,7 +197,7 @@ const Contact = () => {
                           </a>
                         </li>
                         <li>
-                          <a
+                          <a                       
                             href="https://www.linkedin.com/company/loopmit/posts/?feedView=all"
                             target="_blank"
                             rel="noopener noreferrer"

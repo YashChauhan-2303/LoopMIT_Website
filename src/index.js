@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ThemeProvider } from './context/ThemeContext.jsx';
 
 //import css in order
 import 'normalize.css';
@@ -32,6 +33,7 @@ import Preloader from './components/preloader';
 
 ReactDOM.render(
     <React.Fragment>
+        <ThemeProvider>
         <Navbar />
         <Intro />
         <About />
@@ -39,6 +41,7 @@ ReactDOM.render(
         <Contact />
         <BackToTop />
         <Preloader />
+        </ThemeProvider>
     </React.Fragment>,
 document.getElementById('root'));
 

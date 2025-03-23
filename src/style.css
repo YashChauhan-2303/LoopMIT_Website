@@ -1,4 +1,46 @@
 /* Add this to your existing CSS (style.css) */
+/* Dark mode styles */
+.dark body {
+  background-color: #1a1a1a !important;
+  color: #e0e0e0 !important;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #f5f5f5;
+}
+
+.dark a {
+  color: #f5f5f5;
+}
+
+.dark .navbar-b.navbar-reduce {
+  background-color: #1a1a1a;
+}
+
+.dark .navbar-b.navbar-reduce .nav-link {
+  color: #f5f5f5;
+}
+
+.dark .work-box,
+.dark .box-shadow-full {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+
+.dark .color-text-a {
+  color: #e0e0e0;
+}
+
+.dark .title-left:before,
+.dark .title-center:before {
+  background-color: #f5f5f5;
+}
+
 .animation-wrapper {
   display: block !important;
   overflow: visible !important;
